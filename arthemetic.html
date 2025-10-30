@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arthemetic Operatorss</title>
+    <style>
+        body{
+            counter-reset: section;
+        }
+        h2::before{
+            counter-increment: section;
+            content: counter(section) ". ";
+            font-weight: bold;
+            margin-right: 0.5em;
+        }
+        p,h4{
+
+            margin-left: 50px;
+
+        }
+    </style>
+
+</head>
+<body style="margin: 130px; margin-left: 350px; font-size: larger; letter-spacing: 0.05em;">
+
+    <h1>Arthemetic Operators</h1>
+
+    <h2>Addition</h2>
+    <p id="addx"></p>
+    <p id="addy"></p>
+    <p id="addz"></p>
+
+    <br>
+
+    <h2>Substraction</h2>
+    <p id="subx"></p>
+    <p id="suby"></p>
+    <p id="subz"></p>
+
+    <br>
+
+    <h2>Multiplication</h2>
+    <p id="mulx"></p>
+    <p id="muly"></p>
+    <p id="mulz"></p>
+
+    <br>
+
+    <h2>Division</h2>
+    <p id="divx"></p>
+    <p id="divy"></p>
+    <p id="divz"></p>
+
+    <br>
+
+    <h2>Modulus</h2>
+    <p id="modx"></p>
+    <p id="mody"></p>
+    <p id="modz"></p>
+
+    <br>
+
+    <h2>Exponential</h2>
+    <p id="expx"></p>
+    <p id="expy"></p>
+    <p id="expz"></p>
+
+    <br>
+
+    <h2>Increment</h2>
+    <h4>Post Increment :</h4>
+    <p>Initial Values</p>
+    <p id="postincx1"></p>
+    <p id="postincy1"></p>
+    <p>Values after operation</p>
+    <p id="postincx2"></p>
+    <p id="postincy2"></p>
+
+    
+    <h4>Pre Increment :</h4>
+    <p>Initial Values</p>
+    <p id="preincx1"></p>
+    <p id="preincy1"></p>
+    <p>Values after operation</p>
+    <p id="preincx2"></p>
+    <p id="preincy2"></p>
+
+    <br>
+
+    <h2>Decrement</h2>
+    <h4>Post Decrement :</h4>
+    <p>Initial Values</p>
+    <p id="postdecx1"></p>
+    <p id="postdecy1"></p>
+    <p>Values after operation</p>
+    <p id="postdecx2"></p>
+    <p id="postdecy2"></p>
+
+
+    <h4>Pre Decrement :</h4>
+    <p>Initial Values</p>
+    <p id="predecx1"></p>
+    <p id="predecy1"></p>
+    <p>Values after operation</p>
+    <p id="predecx2"></p>
+    <p id="predecy2"></p>
+
+    <br>
+    <br>
+
+
+    <script>
+        {
+            //addition
+            let x = 10;
+            let y = 5;
+            let z = x + y;
+            document.getElementById("addx").innerHTML = "x value is : "+x;
+            document.getElementById("addy").innerHTML = "y value is : "+y;
+            document.getElementById("addz").innerHTML = "Total value (x+y) : "+z;
+        }
+
+        {
+            //substraction
+            let x = 10;
+            let y = 5;
+            let z = x - y;
+            document.getElementById("subx").innerHTML = "x value is : "+x;
+            document.getElementById("suby").innerHTML = "y value is : "+y;
+            document.getElementById("subz").innerHTML = "Total value (x-y) : "+z;
+        }
+
+        {
+            //multiplication
+            let x = 10;
+            let y = 5;
+            let z = x * y;
+            document.getElementById("mulx").innerHTML = "x value is : "+x;
+            document.getElementById("muly").innerHTML = "y value is : "+y;
+            document.getElementById("mulz").innerHTML = "Total value (x*y) : "+z;
+        }
+
+        {
+            //division
+            let x = 10;
+            let y = 5;
+            let z = x / y;
+            document.getElementById("divx").innerHTML = "x value is : "+x;
+            document.getElementById("divy").innerHTML = "y value is : "+y;
+            document.getElementById("divz").innerHTML = "Total value (x/y) : "+z;
+        }
+
+        {
+            //modulus
+            let x = 10;
+            let y = 5;
+            let z = x % y;
+            document.getElementById("modx").innerHTML = "x value is : "+x;
+            document.getElementById("mody").innerHTML = "y value is : "+y;
+            document.getElementById("modz").innerHTML = "Total value (x%y) : "+z;
+        }
+
+        {
+            //exponential
+            let x = 10;
+            let y = 5;
+            let z = x ** y;
+            document.getElementById("expx").innerHTML = "x value is : "+x;
+            document.getElementById("expy").innerHTML = "y value is : "+y;
+            document.getElementById("expz").innerHTML = "Total value (x**y) : "+z;
+        }
+
+        {
+            //post increment
+            let x = 5;
+            
+            document.getElementById("postincx1").innerHTML = "x = "+x;
+            document.getElementById("postincy1").innerHTML = "y = "+"x++";
+
+            let y = x++;
+
+            document.getElementById("postincx2").innerHTML = "x = "+x;
+            document.getElementById("postincy2").innerHTML = "y = "+y;
+        }
+
+        {
+            //pre increment
+            let x = 5;
+            
+
+            document.getElementById("preincx1").innerHTML = "x = "+x;
+            document.getElementById("preincy1").innerHTML = "y = "+"++x";
+
+            let y = ++x;
+
+            document.getElementById("preincx2").innerHTML = "x = "+x;
+            document.getElementById("preincy2").innerHTML = "y = "+y;
+        }
+
+        {
+            //post decrement
+            let x = 5;
+            
+
+            document.getElementById("postdecx1").innerHTML = "x = "+x;
+            document.getElementById("postdecy1").innerHTML = "y = "+"x--";
+
+            let y = x--;
+
+            document.getElementById("postdecx2").innerHTML = "x = "+x;
+            document.getElementById("postdecy2").innerHTML = "y = "+y;
+        }
+
+        {
+            //pre decrement
+            let x = 5;
+            
+
+            document.getElementById("predecx1").innerHTML = "x = "+x;
+            document.getElementById("predecy1").innerHTML = "y = "+"--x";
+
+            let y = --x;
+
+            document.getElementById("predecx2").innerHTML = "x = "+x;
+            document.getElementById("predecy2").innerHTML = "y = "+y;
+        }
+        
+
+    </script>
+    
+</body>
+</html>

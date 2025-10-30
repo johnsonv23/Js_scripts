@@ -1,6 +1,6 @@
 let x = "Welcome ";
-        var y = "Trignosys Software ";
+var y = "Trignosys Software ";
 
-        document.getElementById('demo').innerHTML = x + "to " + y + "Private Ltd";
+document.getElementById('demo').innerHTML = x + "to " + y + "Private Ltd";
 
         
