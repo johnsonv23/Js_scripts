@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Operatorss</title>
+    <style>
+        body{
+            counter-reset: section;
+        }
+        h2::before{
+            counter-increment: section;
+            content: counter(section) ". ";
+            font-weight: bold;
+            margin-right: 0.5em;
+        }
+        p,h4{
+
+            margin-left: 50px;
+
+        }
+    </style>
+
+</head>
+<body style="margin: 130px; margin-left: 350px; font-size: larger; letter-spacing: 0.05em;">
+
+    <h1>Assignment Operators</h1>
+
+    <h2>Simple Assignment</h2>
+    <p id="sax"></p>
+    <p id="say"></p>
+    <p>After assignment</p>
+    <p id="sayf"></p>
+
+    <br>
+
+    <h2>Addition Assignment</h2>
+    <p id="aax"></p>
+    <p id="aaxa"></p>
+    <p>After assignment</p>
+    <p id="aaxf"></p>
+
+    <br>
+
+    <h2>Subtraction Assignment</h2>
+    <p id="sbx"></p>
+    <p id="sbxa"></p>
+    <p>After assignment</p>
+    <p id="sbxf"></p>
+
+    <br>
+
+    <h2>Multiplication Assignment</h2>
+    <p id="mux"></p>
+    <p id="muxa"></p>
+    <p>After assignment</p>
+    <p id="muxf"></p>
+
+    <br>
+    
+    <h2>Division Assignment</h2>
+    <p id="dax"></p>
+    <p id="daxa"></p>
+    <p>After assignment</p>
+    <p id="daxf"></p>
+    
+    <br>
+
+    <h2>Exponentiation Assignment</h2>
+    <p id="eax"></p>
+    <p id="eaxa"></p>
+    <p>After assignment</p>
+    <p id="eaxf"></p>
+
+    <br>
+
+    <h2>Remainder Assignment</h2>
+    <p id="max"></p>
+    <p id="maxa"></p>
+    <p>After assignment</p>
+    <p id="maxf"></p>
+
+    <h2>Colon Assignment</h2>
+    <p id="cox"></p>
+    <p id="coxa"></p>
+    <p id="coxf"></p>
+
+    <br>
+    <br>
+
+
+    <script>
+        {
+            //Simple Assignment
+            let x = 10;
+            let y = x;
+            
+            document.getElementById("sax").innerHTML = "x = "+x;
+            document.getElementById("say").innerHTML = "y = "+"x";
+            document.getElementById("sayf").innerHTML = "y = "+y;
+        }
+
+        {
+            //Addition Assignment
+            let x = 10;
+            let y = 5;
+                
+            document.getElementById("aax").innerHTML = "x = "+x;
+            document.getElementById("aaxa").innerHTML = "x += "+y;
+            x += y;
+            document.getElementById("aaxf").innerHTML = "x = "+x;
+        }
+
+        {
+            //Substraction Assignment
+            let x = 10;
+            let y = 5;
+                
+            document.getElementById("sbx").innerHTML = "x = "+x;
+            document.getElementById("sbxa").innerHTML = "x -= "+y;
+            x -= y;
+            document.getElementById("sbxf").innerHTML = "x = "+x;
+
+        }
+
+        {
+            //multiplication
+            let x = 10;
+            let y = 5;
+                
+            document.getElementById("mux").innerHTML = "x = "+x;
+            document.getElementById("muxa").innerHTML = "x *= "+y;
+            x *= y;
+            document.getElementById("muxf").innerHTML = "x = "+x;
+        }
+
+        {
+            //division
+            let x = 10;
+            let y = 5;
+                
+            document.getElementById("dax").innerHTML = "x = "+x;
+            document.getElementById("daxa").innerHTML = "x /= "+y;
+            x /= y;
+            document.getElementById("daxf").innerHTML = "x = "+x;
+        }
+
+        {
+            //exponential
+            let x = 10;
+            let y = 5;
+                
+            document.getElementById("eax").innerHTML = "x = "+x;
+            document.getElementById("eaxa").innerHTML = "x **= "+y;
+            x **= y;
+            document.getElementById("eaxf").innerHTML = "x = "+x;
+        }
+
+        {
+            //modulus
+            let x = 10;
+            let y = 5;
+                
+            document.getElementById("max").innerHTML = "x = "+x;
+            document.getElementById("maxa").innerHTML = "x %= "+y;
+            x %= y;
+            document.getElementById("maxf").innerHTML = "x = "+x;
+        }
+
+        {
+            //colon
+            let capitals = {Andhra:"Amaravathi", Telangana:"Hyderabad", TamilNadu:"Chennai", Karnataka:"Bengluru"};
+                
+            document.getElementById("cox").innerHTML = "Capitals = "+"{Andhra:\"Amaravathi\", Telangana:\"Hyderabad\", TamilNadu:\"Chennai\", Karnataka:\"Bengluru\"}";
+            document.getElementById("coxa").innerHTML = "Values are assigned in Object using \":\" and can be accessed individually for ex:";
+            document.getElementById("coxf").innerHTML = "Capital of Telangana = "+capitals.Telangana;
+        }
+
+
+        
+
+    </script>
+    
+</body>
+</html>
