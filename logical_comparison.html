@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparison & Logical Operatorss</title>
+    <style>
+        body{
+            counter-reset: section;
+        }
+        h2::before{
+            counter-increment: section;
+            content: counter(section) ". ";
+            font-weight: bold;
+            margin-right: 0.5em;
+        }
+        p,h4{
+
+            margin-left: 50px;
+
+        }
+    </style>
+
+</head>
+<body style="margin: 130px; margin-left: 350px; font-size: larger; letter-spacing: 0.05em;">
+
+    <h1>Comparison Operators</h1>
+
+    <h2>Equals To</h2>
+    <p id="etx"></p>
+    <p id="ety"></p>
+    <p id="etc"></p>
+    <p id="etf"></p>
+
+
+    <h2>Triple Equals To</h2>
+    <p id="tex"></p>
+    <p id="tey"></p>
+    <p id="tec"></p>
+    <p id="tef"></p>
+
+
+    <h2>Not Equals To</h2>
+    <p id="nex"></p>
+    <p id="ney"></p>
+    <p id="nec"></p>
+    <p id="nef"></p>
+
+
+    <h2>Not Double Equals To</h2>
+    <p id="ndx"></p>
+    <p id="ndy"></p>
+    <p id="ndc"></p>
+    <p id="ndf"></p>
+
+
+    <h2>Greater Than</h2>
+    <p id="gtx"></p>
+    <p id="gty"></p>
+    <p id="gtc"></p>
+    <p id="gtf"></p>
+
+
+    <h2>Less Than</h2>
+    <p id="ltx"></p>
+    <p id="lty"></p>
+    <p id="ltc"></p>
+    <p id="ltf"></p>
+
+
+
+    <h2>Greater Than Equals To</h2>
+    <p id="gtex"></p>
+    <p id="gtey"></p>
+    <p id="gtec"></p>
+    <p id="gtef"></p>
+
+    <h2>Less Than Equals To</h2>
+    <p id="ltex"></p>
+    <p id="ltey"></p>
+    <p id="ltec"></p>
+    <p id="ltef"></p>
+
+    <h1>Logical Operators</h1>
+
+    <h2>Logical &&</h2>
+    <p id="lgex"></p>
+    <p id="lgey"></p>
+    <p id="lgec"></p>
+    <p id="lgef"></p>
+
+    <h2>Logical ||</h2>
+    <p id="lgox"></p>
+    <p id="lgoy"></p>
+    <p id="lgoc"></p>
+    <p id="lgof"></p>
+
+    <h2>Logical &&=</h2>
+    <p id="lgeex"></p>
+    <p id="lgeey"></p>
+    <!-- <p id="lgeec"></p> -->
+    <p id="lgeef"></p>
+
+    <h2>Logical ||=</h2>
+    <p id="lgoex"></p>
+    <p id="lgoey"></p>
+    <!-- <p id="lgoec"></p> -->
+    <p id="lgoef"></p>
+
+    <h2>Logical ??=</h2>
+    <p id="lgnex"></p>
+    <p id="lgney"></p>
+    <!-- <p id="lgoec"></p> -->
+    <p id="lgnef"></p>
+
+
+    <script>
+        {
+            //Equals To
+            let x = 10;
+            let y = 10;
+            
+            document.getElementById("etx").innerHTML = "x = "+x;
+            document.getElementById("ety").innerHTML = "y = "+y;
+            document.getElementById("etc").innerHTML = "x == y ?";
+            document.getElementById("etf").innerHTML = (x==y);
+        }
+
+        {
+            //Triple Equals To
+            let x = 10;
+            let y = "10";
+                
+            document.getElementById("tex").innerHTML = "x = "+x;
+            document.getElementById("tey").innerHTML = "y = \"10\"";
+            document.getElementById("tec").innerHTML = "x === y ?";
+            document.getElementById("tef").innerHTML = (x===y);
+        }
+
+        {
+            //Not Equals To
+            let x = 10;
+            let y = 5;
+                
+            document.getElementById("nex").innerHTML = "x = "+x;
+            document.getElementById("ney").innerHTML = "y = "+y;
+            document.getElementById("nec").innerHTML = "x != y ?";
+            document.getElementById("nef").innerHTML = (x!=y);
+        }
+
+        {
+            //Not Double Equals To
+            let x = 10;
+            let y = "10";
+                
+            document.getElementById("ndx").innerHTML = "x = "+x;
+            document.getElementById("ndy").innerHTML = "y = \"10\"";
+            document.getElementById("ndc").innerHTML = "x !== y ?";
+            document.getElementById("ndf").innerHTML = (x!==y);
+        }
+
+        {
+            //Greater Than
+            let x = 10;
+            let y = 5;
+                
+            document.getElementById("gtx").innerHTML = "x = "+x;
+            document.getElementById("gty").innerHTML = "y = "+y;
+            document.getElementById("gtc").innerHTML = "x > y ?";
+            document.getElementById("gtf").innerHTML = (x>y);
+        }
+
+        {
+            //Less Than
+            let x = 10;
+            let y = 5;
+                
+            document.getElementById("ltx").innerHTML = "x = "+x;
+            document.getElementById("lty").innerHTML = "y = "+y;
+            document.getElementById("ltc").innerHTML = "x < y ?";
+            document.getElementById("ltf").innerHTML = (x<y);
+        }
+
+        {
+            //Greater Than Equals To
+            let x = 10;
+            let y = 5;
+                
+            document.getElementById("gtex").innerHTML = "x = "+x;
+            document.getElementById("gtey").innerHTML = "y = "+y;
+            document.getElementById("gtec").innerHTML = "x >= y ?";
+            document.getElementById("gtef").innerHTML = (x>=y);
+        }
+
+        {
+            //Less Than Equals To
+            let x = 10;
+            let y = 5;
+                
+            document.getElementById("ltex").innerHTML = "x = "+x;
+            document.getElementById("ltey").innerHTML = "y = "+y;
+            document.getElementById("ltec").innerHTML = "x <= y ?";
+            document.getElementById("ltef").innerHTML = (x<=y);
+        
+        }
+
+        {
+            //Logical &&
+            let x = 10;
+            let y = 5;
+                
+            document.getElementById("lgex").innerHTML = "x = "+x;
+            document.getElementById("lgey").innerHTML = "y = "+y;
+            document.getElementById("lgec").innerHTML = "x >= 5 && y <10 ?";
+            document.getElementById("lgef").innerHTML = (x >= 5 && y <10);
+        
+        }
+
+        {
+            //Logical ||
+            let x = 10;
+            let y = 5;
+                
+            document.getElementById("lgox").innerHTML = "x = "+x;
+            document.getElementById("lgoy").innerHTML = "y = "+y;
+            document.getElementById("lgoc").innerHTML = "x > 5 || y <5 ?";
+            document.getElementById("lgof").innerHTML = (x > 5 || y <5);
+        
+        }
+
+        {
+            //Logical &&=
+            let x = 1;
+            
+                
+            document.getElementById("lgeex").innerHTML = "x = "+x;
+            let y = x &&=5;
+            document.getElementById("lgeey").innerHTML = "y = x &&=5";
+            // document.getElementById("lgoc").innerHTML = "x > 5 || y <5 ?";
+            document.getElementById("lgeef").innerHTML = "y = "+y;
+        
+        }
+
+        {
+            //Logical &&=
+            let x = 1;
+            
+                
+            document.getElementById("lgoex").innerHTML = "x = "+x;
+            let y = x ||=5;
+            document.getElementById("lgoey").innerHTML = "y = x ||=5";
+            // document.getElementById("lgoc").innerHTML = "x > 5 || y <5 ?";
+            document.getElementById("lgoef").innerHTML = "y = "+y;
+        
+        }
+
+        {
+            //Logical ??=
+            let x = null;
+                
+                
+            document.getElementById("lgnex").innerHTML = "x = "+x;
+             x ??=5;
+            document.getElementById("lgney").innerHTML = "x ??=5";
+            // document.getElementById("lgoc").innerHTML = "x > 5 || y <5 ?";
+            document.getElementById("lgnef").innerHTML = "x = "+x;
+        
+        }
+    </script>
+    
+</body>
+</html>
