@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Operatorss</title>
+    <style>
+        body{
+            counter-reset: section;
+        }
+        h2::before{
+            counter-increment: section;
+            content: counter(section) ". ";
+            font-weight: bold;
+            margin-right: 0.5em;
+        }
+        p,h4{
+
+            margin-left: 50px;
+
+        }
+    </style>
+
+</head>
+<body style="margin: 130px; margin-left: 350px; font-size: larger; letter-spacing: 0.05em;">
+
+    <h1>Conditional Statements</h1>
+
+    <h2>IF</h2>
+    <p id="ifx"></p>
+    <p id="ify"></p>
+
+    <h2>NESTED IF</h2>
+    <p id="nfx"></p>
+    <p id="nfy"></p>
+    <p id="nfz"></p>
+
+
+    <h2>IF...ELSE</h2>
+    <p id="iex"></p>
+    <p id="iey"></p>
+
+
+    <h2>NESTED IF...ELSE</h2>
+    <p id="niex"></p>
+    <p id="niey"></p>
+    <p id="niez"></p>
+
+
+    <h2>TERNARY OPERATOR</h2>
+    <p id="tox"></p>
+    <p id="toy"></p>
+    
+
+
+
+    <script>
+        {
+            //IF
+            let age = 18;
+            let text = "You are NOT allowed to drive.";
+            
+            if(age>=18){
+                text = "You are allowed to drive";
+            }
+            document.getElementById("ifx").innerHTML="Age ="+age;
+            document.getElementById("ify").innerHTML=text;
+        }
+
+        {
+            //NESTED IF
+            let age = 18;
+            let country = "India"
+            let text = "You are NOT allowed to drive.";
+            
+            if(country=="India")
+            {
+                if(age>=18){
+                    text = "You are allowed to drive";
+                }
+            }
+            document.getElementById("nfx").innerHTML="Age ="+age;
+            document.getElementById("nfy").innerHTML="Country ="+country;
+            document.getElementById("nfz").innerHTML=text;
+        }
+
+        {
+            //IF ELSE
+            let age = 16;
+            let text;
+
+            if(age>=18)
+            {
+                text = "You are allowed to drive";
+            }else
+            {
+                text = "You are NOT allowed to drive";
+            }
+           
+            document.getElementById("iex").innerHTML="Age ="+age;
+            document.getElementById("iey").innerHTML=text;
+        }
+
+        {
+            //NESTED IF ELSE
+            let age = 16;
+            let country="USA";
+            let text;
+
+            if(age>=18 && country=="India")
+            {
+                text = "You are allowed to drive in India";
+            }else if(age>=16 && country=="USA")
+            {
+                text = "You are allowed to drive in USA";
+            }else{
+
+                text="You are NOT allowed to drive";
+            }
+           
+            document.getElementById("niex").innerHTML="Age ="+age;
+            document.getElementById("niey").innerHTML="Country ="+country;
+            document.getElementById("niez").innerHTML=text;
+        }
+
+        {
+            //TERNARY OPERATOR
+            let age = 17;
+            let text = (age<18)? "Minor":"Adult";
+            document.getElementById("tox").innerHTML = "Age ="+age;
+            document.getElementById("toy").innerHTML="Person is "+text;
+        }
+        
+    </script>
+    
+</body>
+</html>
