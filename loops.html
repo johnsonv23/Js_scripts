@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+    <style>
+        body{
+            counter-reset: section;
+        }
+        h2::before{
+            counter-increment: section;
+            content: counter(section) ". ";
+            font-weight: bold;
+            margin-right: 0.5em;
+        }
+        p,h4{
+
+            margin-left: 50px;
+
+        }
+    </style>
+</head>
+<body style="margin: 130px; margin-left: 350px; font-size: larger; letter-spacing: 0.05em;">
+
+    <h2>Print 10 to 50</h2>
+    <p id="d1"></p>
+
+    <h2>Print -10 to -50</h2>
+    <p id="d2"></p>
+
+    <h2>Switch</h2>
+    <p id="d3"></p>
+
+    <h2>Even or Odd Number</h2>
+    <p id="e1"></p>
+    <p id="e2"></p>
+
+    <h2>Prime Number</h2>
+    <p id="p1"></p>
+
+    <h2>Print Prime Numbers 1 to 100</h2>
+    <p id="p2"></p>
+
+    <h2>Print Name 10 Times</h2>
+    <p id="p3"></p>
+
+    <h2>Print 10 to 1</h2>
+    <p id="p4"></p>
+
+    <h2>Table</h2>
+    <p id="p5"></p>
+
+    <h2>Continue</h2>
+    <p id="p6"></p>
+
+    <script>
+        {
+            //Print 10 to 50
+            let i = 0;
+            let text="";
+            for(i=10;i<=50;i++)
+            {
+            text +=i+"<br>"; 
+            }
+            document.getElementById("d1").innerHTML=text;
+        }
+
+        {
+            //Print -10 to -50
+            let i = 0;
+            let text="";
+            for(i=-10;i>=-50;i--)
+            {
+            text +=i+"<br>"; 
+            }
+            document.getElementById("d2").innerHTML=text;
+        }
+
+        {
+            //Switch statement
+            let day="";
+            let date = new Date().getDay();
+                
+            switch(date){
+
+                case 1 : 
+                    day = "Monday";
+                    break;
+
+                case 2 :
+                    day = "Tuesday";
+                    break;
+                
+                case 3 :
+                    day = "Wednesday";
+                    break;
+                
+                case 4 :
+                    day = "Thurday";
+                    break;
+                
+                case 5 :
+                    day = "Friday";
+                    break;
+
+                case 6 :
+                case 0 :
+                    day = "Weekend";
+                    break;
+
+                default:
+                    day="Wrong date";                    
+            }
+            document.getElementById("d3").innerHTML="Today is "+day;
+        }
+
+        {
+            //Even or Odd Number
+            let num1 = 25;
+            let num2=14;
+            let text1="";
+            let text2="";
+
+            if(num1%2==0){
+                text1="Even Number";
+            }else
+            {
+                text1="Odd Number";
+            }
+
+            if(num2%2==0){
+                text2="Even Number";
+            }else
+            {
+                text2="Odd Number";
+            }
+            document.getElementById("e1").innerHTML="The number "+num1+" is "+text1;
+            document.getElementById("e2").innerHTML="The number "+num2+" is "+text2;
+
+        }
+
+        {
+            //Prime Number Check
+            let num = 17;
+            let x=0;
+            let text="";
+            for(i=1;i<=num;i++)
+            {
+                if(num%i==0)
+                {
+                    x++;
+                }
+            }
+
+            if(x<=2)
+            {
+                text="Prime";
+            }
+            else
+            {
+                text="Not Prime";
+            }
+            document.getElementById("p1").innerHTML="Number "+num+" is "+text;
+        }
+
+        {
+            //Print Prime Number 1 to 100
+            let text="";
+            for(i=1;i<=100;i++)
+            {
+                let x=0;
+                for(let j=1;j<=i;j++)
+                {
+                    if(i%j==0)
+                    {
+                        x++;
+                    }
+                }
+                if(x<=2)
+                {
+                    text +=i+"<br>"
+                }
+
+            }
+            document.getElementById("p2").innerHTML=text;
+        }
+
+        {
+            //Print your name 10 Times
+            let name = "Johnson";
+            let text="";
+            for(i=0;i<10;i++)
+            {
+                text +=name+"<br>"
+            }
+
+            document.getElementById("p3").innerHTML=text;
+
+        }
+
+        {
+            //print 10 to 1
+            let text="";
+            let i=10;
+            while(i>=1)
+            {
+                text +=i+"<br>";
+                i--;
+            }
+            document.getElementById("p4").innerHTML=text;
+        }
+
+        {
+            //table
+            let text="";
+            let x=5;
+            for(i=1;i<=10;i++)
+            {
+                text +=x+" * "+i+" = "+(x*i)+"<br>";
+            }
+            document.getElementById("p5").innerHTML=text;
+
+        }
+
+        {
+            //continue
+            //print only odd numbers
+            let text="";
+            for(i=1;i<=20;i++)
+            {
+                if(i%2==0)
+                {
+                    continue;
+                }
+                else
+                {
+                    text += i+"<br>"
+                }
+            }
+            document.getElementById("p6").innerHTML=text;
+        }
+
+    </script>
+    
+</body>
+</html>
