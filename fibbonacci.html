@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Series</title>
+    <style>
+        body{
+            counter-reset: section;
+        }
+        h2::before{
+            counter-increment: section;
+            content: counter(section) ". ";
+            font-weight: bold;
+            margin-right: 0.5em;
+        }
+        p,h4{
+
+            margin-left: 50px;
+
+        }
+    </style>
+</head>
+<body style="margin: 130px; margin-left: 350px; font-size: larger; letter-spacing: 0.05em;">
+
+    <h2>Fibonacci Series</h2>
+    <p id="n1"></p>
+    <p id="f1"></p>
+
+    <h2>Factorial of n</h2>
+    <p id="n2"></p>
+    <p id="f2"></p>
+
+    <h2>Reverse</h2>
+    <p id="s1"></p>
+    <p id="s2"></p>
+
+    <h2>Swap</h2>
+    <p id="w1"></p>
+    <p id="w2"></p>
+
+    <h2>Sum of n numbers</h2>
+    <p id="m1"></p>
+    <p id="m2"></p>
+
+    <script>
+
+        {
+            //Fibonacci
+            let n=10;
+            let first = 0;
+            let second = 1;
+            let series=[];
+
+            if(n==1)
+            {
+                series.push(first)
+            }
+            if(n==2)
+            {
+                series.push(first,second);
+            }
+            if(n>2)
+            {
+                series.push(first,second);
+
+                let third=0;
+
+                for(i=2;i<=n;i++)
+                {
+                    third=first+second;
+                    series.push(third);
+                    first=second;
+                    second=third;
+
+                }
+            }
+
+            document.getElementById("n1").innerHTML="n ="+n;
+            document.getElementById("f1").innerHTML=series;
+
+        }
+
+        {
+            //Factorial
+            let n=5;
+            let m=n;
+            let fact=1;
+            
+            while(n>=1)
+            {
+                fact*=n;
+                n--;
+            }
+
+            document.getElementById("n2").innerHTML="n ="+m;
+            document.getElementById("f2").innerHTML=m+"! ="+fact;
+
+        }
+
+        {
+            //Reverse
+            let num=123456
+            let rev="";
+            let str=num.toString();
+
+            for(i=str.length-1;i>=0;i--)
+            {
+                rev +=str[i];
+            }
+
+            document.getElementById("s1").innerHTML="num = "+num;
+            document.getElementById("s2").innerHTML="reversed num = "+Number(rev);
+        
+        }
+
+        {
+            //swap
+            let a = "hello";
+            let b = "world";
+            document.getElementById("w1").innerHTML=a+" "+b;
+
+            let c=a;
+            a=b;
+            b=c;
+
+            document.getElementById("w2").innerHTML=a+" "+b;
+        }
+        {
+            //sum of n numbers
+            let n=10;
+            let sum=0;
+
+            document.getElementById("m1").innerHTML="n ="+n;
+
+            while(n>=1)
+            {
+                sum += n;
+                n--;
+            }
+            
+            document.getElementById("m2").innerHTML="sum ="+sum;
+        }
+
+
+    </script>
+    
+</body>
+</html>
