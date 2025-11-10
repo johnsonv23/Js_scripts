@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+    <style>
+        body{
+            counter-reset: section;
+        }
+        h2::before{
+            counter-increment: section;
+            content: counter(section) ". ";
+            font-weight: bold;
+            margin-right: 0.5em;
+        }
+        p,h4,pre{
+
+            margin-left: 50px;
+
+        }
+    </style>
+</head>
+<body style="margin: 130px; margin-left: 350px; font-size: larger; letter-spacing: 0.05em;">
+
+    <h1>String Methods</h1>
+
+    <h2>String Length</h2>
+    <p id="l1"></p>
+    <p id="l2"></p>
+
+    <h2>chatAt()</h2>
+    <p>The charAt() method returns the character at a specified index (position) in a string:</p>
+    <p id="c1"></p>
+    <p id="c2"></p>
+
+    <h2>charCodeAt()</h2>
+    <p>The charCodeAt() method returns the code of the character at a specified index in a string</p>
+    <p id="c3"></p>
+    <p id="c4"></p>
+
+    <h2>String at()</h2>
+    <p>The at() method returns the character at a specified index (position) in a string.</p>
+    <p id="a1"></p>
+    <p id="a2"></p>
+
+    <h2>String concat()</h2>
+    <p id="o1"></p>
+    <p id="o2"></p>
+    <p id="o3"></p>
+
+    <h2>String slice()</h2>
+    <p>slice() extracts a part of a string and returns the extracted part in a new string</p>
+    <p id="s1"></p>
+    <p id="s2"></p>
+
+    <h2>String substring()</h2>
+    <p>substring() is similar to slice(). The difference is that start and end values less than 0 are treated as 0 in substring()</p>
+    <p id="s3"></p>
+    <p id="s4"></p>
+
+    <h2>String substr()</h2>
+    <p>substr() is similar to slice(). The difference is that the second parameter specifies the length of the extracted part.</p>
+    <p id="s5"></p>
+    <p id="s6"></p>
+
+    <h2>String toUpperCase()</h2>
+    <p id="u1"></p>
+    <p id="u2"></p>
+
+    <h2>String toLowerCase()</h2>
+    <p id="u3"></p>
+    <p id="u4"></p>
+
+    <h2>String isWellFormed()</h2>
+    <p>The isWellFormed() method returns true if a string is well formed. Otherwise it returns false.</p>
+    <p>A string is not well formed if it contains lone surrogates.</p>
+    <p id="w1"></p>
+    <p id="w2"></p>
+
+    <h2>String trim()</h2>
+    <pre id="t1"></pre>
+    <pre id="t2"></pre>
+
+    <h2>String trimStart()</h2>
+    <pre id="t3"></pre>
+    <pre id="t4"></pre>
+
+    <h2>String trimEnd()</h2>
+    <pre id="t5"></pre>
+    <pre id="t6"></pre>
+
+    <h2>String padStart()</h2>
+    <p>It pads a string with another string (multiple times) until it reaches a given length.</p>
+    <pre id="p1"></pre>
+    <pre id="p2"></pre>
+
+    <h2>String padEnd()</h2>
+    <p>The padEnd() method pads a string from the end.</p>
+    <pre id="p3"></pre>
+    <pre id="p4"></pre>
+
+    <h2>String repeat()</h2>
+    <p>The repeat() method returns a string with a number of copies of a string.</p>
+    <p id="r1"></p>
+    <p id="r2"></p>
+
+    <h2>Replacing String Content</h2>
+    <p>The replace() method replaces a specified value with another value in a string:</p>
+    <p id="r3"></p>
+    <p id="r4"></p>
+
+    <h2>Replacing All</h2>
+    <p>The replaceAll() method allows you to specify a regular expression instead of a string to be replaced.</p>
+    <p id="r5"></p>
+    <p id="r6"></p>
+
+    <h2>String split()</h2>
+    <p>A string can be converted to an array with the split() method:</p>
+    <p id="n1"></p>
+    <p id="n2"></p>
+    <p id="n3"></p>
+
+    <h2>String indexOf()</h2>
+    <p>The indexOf() method returns the index (position) of the first occurrence of a string in a string, or it returns -1 if the string is not found:</p>
+    <p id="io1"></p>
+    <p id="io2"></p>
+
+    <h2>String indexOf() with start point</h2>
+    <p id="io5"></p>
+    <p id="io6"></p>
+
+    <h2>String lastIndexOf()</h2>
+    <p>The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:</p>
+    <p id="io3"></p>
+    <p id="io4"></p>
+
+    <h2>String lastIndexOf() with parameter</h2>
+    <p id="io7"></p>
+    <p id="io8"></p>
+
+    <h2>String search()</h2>
+    <p>The search() method searches a string for a string (or a regular expression) and returns the position of the match:</p>
+    <p id="sr1"></p>
+    <p id="sr2"></p>
+
+    <h2>String match()</h2>
+    <p>The match() method returns an array containing the results of matching a string against a string (or a regular expression).</p>
+    <p id="mt1"></p>
+    <p id="mt2"></p>
+    <p id="mt3"></p>
+
+    <h2>String matchAll()</h2>
+    <p>The matchAll() method returns an iterator containing the results of matching a string against a string (or a regular expression).</p>
+    <p id="mt4"></p>
+    <p id="mt5"></p>
+    <p id="mt6"></p>
+
+    <h2>String includes()</h2>
+    <p>The includes() method returns true if a string contains a specified value.</p>
+    <p id="in1"></p>
+    <p id="in2"></p>
+
+    <h2>String includes() with start point</h2>
+    <p id="in3"></p>
+    <p id="in4"></p>
+
+    <h2>String startsWith()</h2>
+    <p>The startsWith() method returns true if a string begins with a specified value.</p>
+    <p id="sw1"></p>
+    <p id="sw2"></p>
+
+    <h2>String endsWith()</h2>
+    <p>The endsWith() method returns true if a string ends with a specified value.</p>
+    <p id="ew1"></p>
+    <p id="ew2"></p>
+
+    <h2>String valueOf()</h2>
+    <p>The valueOf() method returns the primitive value of a string.The valueOf() method returns the primitive value of a string.</p>
+    <p id="vo1"></p>
+    <p id="vo2"></p>
+
+    <script>
+
+        {
+            //string length
+            let text="ABCDEFGH";
+            let length=text.length;
+
+            document.getElementById("l1").innerHTML="Text = "+text;
+            document.getElementById("l2").innerHTML="Length = "+length;
+        }
+
+        {
+            //charAt()
+            let text="HELLO WORLD";
+            let char = text.charAt(2);
+
+            document.getElementById("c1").innerHTML="Text = "+text;
+            document.getElementById("c2").innerHTML="char at 2 = "+char;
+        }
+
+        {
+            //charCodeAt()
+            let text="HELLO WORLD";
+            let char = text.charCodeAt(3);
+
+            document.getElementById("c3").innerHTML="Text = "+text;
+            document.getElementById("c4").innerHTML="charcode at 3 = "+char;
+        }
+
+        {
+            //at()
+           const name = "Johnson";
+            let letter = name.at(4);
+
+            document.getElementById("a1").innerHTML="Name = "+name;
+            document.getElementById("a2").innerHTML="name.at(4) = "+letter;
+        }
+
+        {
+            //concat()
+            let text1 = "Hi";
+            let text2 = "World";
+            let text3 = text1.concat(" ", text2);
+
+            document.getElementById("o1").innerHTML="Text1 = "+text1;
+            document.getElementById("o2").innerHTML="Text2 = "+text2;
+            document.getElementById("o3").innerHTML="Text3 = "+text3;
+        }
+
+        {
+            //slice()
+            let text = "Apple, Banana, Kiwi";
+            let part = text.slice(7, 13);
+
+            document.getElementById("s1").innerHTML="Text = "+text;
+            document.getElementById("s2").innerHTML="Slice from 7 to 13 = "+part;
+        }
+
+        {
+            //substring()
+            let str = "Apple, Banana, Kiwi";
+            let part = str.substring(0, 13);
+
+            document.getElementById("s3").innerHTML="String = "+str;
+            document.getElementById("s4").innerHTML="substring from 0 to 13 = "+part;
+        }
+
+
+        {
+            //substr()
+            let str = "Apple, Banana, Kiwi";
+            let part = str.substr(7, 6);
+
+            document.getElementById("s5").innerHTML="String = "+str;
+            document.getElementById("s6").innerHTML="substr from 7 and 6 chars = "+part;
+        }
+        
+        {
+            //toUpperCase()
+            let text1 = "Hello World!";
+            let text2 = text1.toUpperCase();
+
+            document.getElementById("u1").innerHTML="Text = "+text1;
+            document.getElementById("u2").innerHTML="TextUpper = "+text2;
+        }
+
+        {
+            //toLowerCase()
+            let text1 = "HeLLo WoRLd!";
+            let text2 = text1.toLowerCase();
+
+            document.getElementById("u3").innerHTML="Text = "+text1;
+            document.getElementById("u4").innerHTML="TextUpper = "+text2;
+        }
+
+        {
+            //isWellFormed()
+            let text = "Hello World \uD800";
+            let result = text.isWellFormed();
+
+            document.getElementById("w1").innerHTML="Text = "+text;
+            document.getElementById("w2").innerHTML="Result = "+result;
+        }
+        
+        {
+            //String trim()
+            let text1 = `      Hello World!      `;
+            let text2 = text1.trim();
+
+            document.getElementById("t1").innerHTML="Text = "+text1;
+            document.getElementById("t2").innerHTML="TextTrimmed = "+text2;
+        }
+
+        {
+            //String trimStart()
+            let text1 = `      Hello World!      `;
+            let text2 = text1.trimStart();
+
+            document.getElementById("t3").innerHTML="Text = "+text1;
+            document.getElementById("t4").innerHTML="TextTStart = "+text2;
+        }
+
+        {
+            //String trimEnd()
+            let text1 = `      Hello World!      `;
+            let text2 = text1.trimEnd();
+
+            document.getElementById("t5").innerHTML="Text = "+text1;
+            document.getElementById("t6").innerHTML="TextTEnd = "+text2;
+        }
+        
+        {
+            //padStart()
+            let text = "5";
+            let padded = text.padStart(4,"J");
+
+            document.getElementById("p1").innerHTML="Text = "+text;
+            document.getElementById("p2").innerHTML="TextPadded with J for length 4 = "+padded;
+        }
+
+        {
+            //padEnd()
+            let text = "5";
+            let padded = text.padEnd(5,"S");
+
+            document.getElementById("p3").innerHTML="Text = "+text;
+            document.getElementById("p4").innerHTML="TextPadEnd with S for length 5 = "+padded;
+        }
+
+        {
+            //repeat()
+            let text = "Hello world! ";
+            let result = text.repeat(3);
+
+            document.getElementById("r1").innerHTML="Text = "+text;
+            document.getElementById("r2").innerHTML="Repeat 3 times = "+result;
+        }
+
+        {
+            //replace
+            let text = "Please visit Vizag";
+            let newText = text.replace("Vizag", "Bhemili");
+
+            document.getElementById("r3").innerHTML="Text = "+text;
+            document.getElementById("r4").innerHTML="Replaced = "+newText;
+        }
+
+        {
+            //replaceAll
+            let text1 = "I love cats. Cats are very easy to love. Cats are very popular."
+            let newText = text1.replaceAll("Cats","Dogs");
+                newText = newText.replaceAll("cats","dogs");
+
+            document.getElementById("r5").innerHTML="Text = "+text1;
+            document.getElementById("r6").innerHTML="ReplacedAll = "+newText;
+        }
+
+        {
+            //split()
+            let text = "a,b,c,d,e,f";
+            const myArray = text.split(",");
+
+            document.getElementById("n1").innerHTML="Text = "+text;
+            document.getElementById("n2").innerHTML='myArray = Text.split(",")';
+            document.getElementById("n3").innerHTML="myArray[2] = "+myArray[2];
+        }
+
+        {
+            //indexOf()
+            let text = "Please locate where 'locate' occurs!";
+            let index = text.indexOf("locate");
+
+            document.getElementById("io1").innerHTML="Text = "+text;
+            document.getElementById("io2").innerHTML="Index of 'locate' = "+index;
+            
+
+        }
+
+        {
+            //indexOf() with parameter
+            let text = "Please locate where 'locate' occurs!";
+            let index = text.indexOf("locate",13);
+
+            document.getElementById("io5").innerHTML="Text = "+text;
+            document.getElementById("io6").innerHTML="Index of 'locate' from 13 = "+index;
+            
+
+        }
+
+        {
+            //lastindexOf()
+            let text = "Please locate where 'locate' occurs!";
+            let index = text.lastIndexOf("locate");
+
+            document.getElementById("io3").innerHTML="Text = "+text;
+            document.getElementById("io4").innerHTML="Last Index of 'locate' = "+index;
+            
+
+        }
+
+        {
+            //lastindexOf() with parameter
+            let text = "Please locate where 'locate' occurs!";
+            let index = text.lastIndexOf("locate", 14);
+
+            document.getElementById("io7").innerHTML="Text = "+text;
+            document.getElementById("io8").innerHTML="Last Index of 'locate' until pos 14 = "+index;
+
+        }
+
+        {
+            //search()
+            let text = "Please locate where 'locate' occurs!";
+            let index=text.search("locate");
+
+            document.getElementById("sr1").innerHTML="Text = "+text;
+            document.getElementById("sr2").innerHTML="Index of 'locate' = "+index;
+        }
+
+        {
+            //match()
+            let text = "The rain in SPAIN stays mainly in the plain";
+            const myArr = text.match("ain");
+            // const myArr = text.match(/ain/g);
+            // const myArr = text.match(/ain/gi);
+            
+            document.getElementById("mt1").innerHTML ="Text = "+text;
+            document.getElementById("mt2").innerHTML = 'myArr = text.match("ain")';
+            document.getElementById("mt3").innerHTML = myArr.length + " " + myArr;
+        }
+
+        {
+            //matchAll()
+            let text = "I love cats. Cats are very easy to love. Cats are very popular.";
+            // const iterator = text.matchAll("Cats");
+
+            // const iterator = text.matchAll(/Cats/g);
+
+            const iterator = text.matchAll(/Cats/gi);
+
+            document.getElementById("mt4").innerHTML ="Text = "+text;
+            document.getElementById("mt5").innerHTML = 'myArr = text.matchAll("Cats")';
+            document.getElementById("mt6").innerHTML = Array.from(iterator);;
+        }
+
+        {
+            //includes()
+            let text = "Hello world, welcome to the universe.";
+
+            document.getElementById("in1").innerHTML ="Text = "+text;
+            document.getElementById("in2").innerHTML ="Includes('world') = "+ text.includes("world");
+        }
+
+        {
+            //includes() with parameter
+            let text = "Hello world, welcome to the universe.";
+
+            document.getElementById("in3").innerHTML ="Text = "+text;
+            document.getElementById("in4").innerHTML ="Includes('world', 13) = "+ text.includes("world,13");
+        }
+
+        {
+            //startsWith()
+            let text = "Hello world, welcome to the universe.";
+
+            document.getElementById("sw1").innerHTML ="Text = "+text;
+            document.getElementById("sw2").innerHTML ="text.startsWith('Hello') = "+ text.startsWith("Hello")
+        }
+
+        {
+            //endsWith()
+            let text = "Hello world, welcome to the universe.";
+
+            document.getElementById("ew1").innerHTML ="Text = "+text;
+            document.getElementById("ew2").innerHTML ="text.endsWith('universe.') = "+ text.endsWith("universe.")
+        }
+
+        {
+            //String valueOf()
+            let text = "Hello World!";
+            let result = text.valueOf();
+
+            document.getElementById("vo1").innerHTML ="Text = "+text;
+            document.getElementById("vo2").innerHTML ="Result = "+result;
+        }
+    
+
+
+    </script>
+    
+</body>
+</html>
