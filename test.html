@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST</title>
+</head>
+<body>
+    
+
+    <pre id="demo"></pre>
+    <pre id="demo2"></pre>
+    <pre id="demo3"></pre>
+    <script>
+        {
+            let n = 8;
+            let text="";
+            let m=1;
+            while(n>0)
+            {   
+                for(i=n-1;i>0;i--)
+                {
+                    text+=" ";
+                }
+                for(j=0;j<m;j++)
+                {
+                    text+="*";
+                }
+                text+="<br>";
+                m=m+2;
+                n--;
+            }
+            document.getElementById("demo").innerHTML=text;
+        }
+
+        {
+            let n = 8;
+            let text="";
+            let m=0;
+            let k=1;
+            while(n>0)
+            {   
+                k=1;
+                for(j=1;j<n;j++)
+                {
+                    k+=2;
+                }
+                for(i=0;i<m;i++)
+                {
+                    text+=" ";
+                }
+                for(l=k;l>0;l--)
+                {
+                    text+="*";
+                }
+                text+="<br>";
+                m++;
+                n--;
+                
+            }
+            document.getElementById("demo2").innerHTML=text;
+        }
+
+        {
+            let n=8;
+            let text="";
+            let m =1;
+
+            while(n>0)
+            {
+                for(i=(n-1);i>0;i--)
+                {
+                    text+=" ";
+                }
+                for(j=1;j<m;j++)
+                {
+                    text+=j;
+                }
+                for(k=j;k>0;k--)
+                {
+                    text+=k;
+                }
+                text+="<br>";
+                m++;
+                n--;
+            }
+            document.getElementById("demo3").innerHTML=text;
+        }
+
+
+
+        
+    </script>
+</body>
+</html>

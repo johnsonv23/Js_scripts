@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Methods</title>
+    <style>
+    body{
+            counter-reset: section;
+        }
+        h2::before{
+            counter-increment: section;
+            content: counter(section) ". ";
+            font-weight: bold;
+            margin-right: 0.5em;
+        }
+        p,h2,pre{
+
+            margin-left: 50px;
+
+        }
+    </style>
+</head>
+<body>
+
+    <h2>toString()</h2>
+    <p>The toString() method returns a number as a string.</p>
+    <p id="t1"></p>
+    <p id="t2"></p>
+
+    <h2>toExponential()</h2>
+    <p>toExponential() returns a string, with a number rounded and written using exponential notation.</p>
+    <p id="e1"></p>
+    <p id="e2"></p>
+
+    <h2>toFixed()</h2>
+    <p>toFixed() returns a string, with the number written with a specified number of decimals:</p>
+    <p id="f1"></p>
+    <p id="f2"></p>
+
+    <h2>toPrecision()</h2>
+    <p>toPrecision() returns a string, with a number written with a specified length:</p>
+    <p id="p1"></p>
+    <p id="p2"></p>
+
+    <h2>valueOf()</h2>
+    <p>valueOf() returns a number as a number.</p>
+    <p id="v1"></p>
+    <p id="v2"></p>
+
+    <script>
+        {
+            //toString()
+            let x = 123;
+            document.getElementById("t1").innerHTML="x = "+x;
+            document.getElementById("t2").innerHTML ="x.toString() = "+ x.toString()+"is string now";
+        }
+
+        {
+            //toExponential()
+            let x = 3.14;
+            document.getElementById("e1").innerHTML="x = "+x;
+            document.getElementById("e2").innerHTML ="x.toExponential(6) = "+ x.toExponential(6);
+        }
+
+        {
+            //toFixed()
+            let x = 3.1414879;
+            document.getElementById("f1").innerHTML="x = "+x;
+            document.getElementById("f2").innerHTML ="x.toFixed(2) = "+ x.toFixed(2);
+        }
+
+        {
+            //toPrecision()
+            let x = 3.14;
+            document.getElementById("p1").innerHTML="x = "+x;
+            document.getElementById("p2").innerHTML ="x.toPrecision(5) = "+ x.toPrecision(5);
+        }
+
+        {
+            //valueOf()
+            let x = 3.14;
+            document.getElementById("v1").innerHTML="x = "+x;
+            document.getElementById("v2").innerHTML ="x.valueOf() = "+ x.valueOf();
+        }
+
+
+
+
+    </script>
+</body>
+</html>
