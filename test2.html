@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Methods</title>
+    <style>
+    body{
+            counter-reset: section;
+        }
+        h2::before{
+            counter-increment: section;
+            content: counter(section) ". ";
+            font-weight: bold;
+            margin-right: 0.5em;
+        }
+        p,h2,pre{
+
+            margin-left: 50px;
+
+        }
+
+        p,button{
+            margin-left: 80px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Write a sample peom using a string.</h2>
+    <pre id="q1"></pre>
+
+    <h2>Add 3 Strings to a single sentence without '+' addtion operator.</h2>
+    <p id="q21"></p>
+    <p id="q22"></p>
+    <p id="q23"></p>
+    <p id="q24"></p>
+
+    <h2>"Hello! Welcome to Trignosys" <br></h2>
+    <p id="q31"></p>
+    <p id="q32"></p>
+    <p id="q33"></p>
+    <p id="q34"></p>
+
+    <h2>"My name is ______ and, I'm ______ years old."</h2>
+    <p id="q41"></p>
+    <p id="q42"></p>
+    <p id="q43"></p>
+
+    <h2>Let x = "Script", replace with "JavaSccript"</h2>
+    <p id="q51"></p>
+    <p id="q52"></p>
+
+    <h2>Replace "bad" with "good" in the string "JavaScript is bad"</h2>
+    <p id="q61"></p>
+    <p id="q62"></p>
+
+    <h2>Write a Js program that asks the username, distric and pincode that prints a formatted</h2>
+    <p id="q71"></p>
+    <p id="q72"></p>
+    <p id="q73"></p>
+    <pre id="q74"></pre>
+
+    <h2>String Constructor example</h2>
+    <p id="q81"></p>
+    <p id="q82"></p>
+
+    <h2>Valueof()</h2>
+    <p id="q91"></p>
+    <p id="q92"></p>
+
+    <h2>Convert goodmorning to uppercase</h2>
+    <p id="q101"></p>
+    <p id="q102"></p>
+
+    <h2>Write a string "apple,banana,kiwi" and split it into an array.</h2>
+    <p id="q111"></p>
+    <p id="q112"></p>
+
+    <h2>Convert WELCOME to lowercase</h2>
+    <p id="q121"></p>
+    <p id="q122"></p>
+
+    <h2>Reverse string "JavaScript"</h2>
+    <p id="q131"></p>
+    <p id="q132"></p>
+
+    <h2>Single click change name->Name village->Village</h2>
+    <p id="q141">My name is name <br>
+    My village is village</p>
+    <button id="b142" onclick="document.getElementById('q141').innerHTML ='My name is Johnson <br> My village is Kothuru'">Click Me!</button>
+
+    <h2>Create a number variable and print it</h2>
+    <p id="q151"></p>
+    <p id="q152"></p>
+
+    <h2>Convert string "456" to number</h2>
+    <p id="q161"></p>
+    <p id="q162"></p>
+
+    <h2>Add two decimal values and print result</h2>
+    <p id="q171"></p>
+    <p id="q172"></p>
+    <p id="q173"></p>
+
+    <h2>Add two bigint values and print result</h2>
+    <p id="q181"></p>
+    <p id="q182"></p>
+    <p id="q183"></p>
+
+    <h2>Convert the string "999999999999999" into Bigint</h2>
+    <p id="q191"></p>
+    <p id="q192"></p>
+    <p id="q193"></p>
+
+    <h2>Error adding bigint with number</h2>
+    <p id="q201"></p>
+    <p id="q202"></p>
+    <p id="q203"></p>
+
+    <h2>Converting Bigint to Number</h2>
+    <p id="q211"></p>
+    <p id="q212"></p>
+    <p id="q213"></p>
+
+    <h2>Find result 5&3</h2>
+    <p id="q221"></p>
+
+    <h2>Find result 7|2</h2>
+    <p id="q231"></p>
+
+    <h2>Find result 12^4</h2>
+    <p id="q241"></p>
+
+    <h2>Find result 5 left shift 4 </h2>
+    <p id="q251"></p>
+
+    <h2>Find result 14 right shift 2</h2>
+    <p id="q261"></p>
+
+    <h2>String addition</h2>
+    <p id="q271"></p>
+    <p id="q272"></p>
+    <p id="q273"></p>
+
+    <h2>Number + String</h2>
+    <p id="q281"></p>
+    <p id="q282"></p>
+    <p id="q283"></p>
+    <p id="q284"></p>
+
+    <h2>Print Addition of two decimals numbers using fixed and withou fixed</h2>
+    <p id="q291"></p>
+    <p id="q292"></p>
+    <p id="q293"></p>
+    <p id="q294"></p>
+
+    <h2>EPLSILON Property</h2>
+    <p id="q301"></p>
+
+    <h2>Check wether given number is prime or not</h2>
+    <p id="q311"></p>
+
+    <h2>Grade assignment</h2>
+    <p id="q321"></p>
+    <p id="q322"></p>
+
+    <h2>Printing odd numbers using continue</h2>
+    <p id="q331"></p>
+
+    <script>
+
+        {
+                //>Write a sample peom using a string
+            let text=`        Something there is that doesn't love a wall,
+        That sends the frozen-ground-swell under it,
+        And spills the upper boulders in the sun;
+        And makes of them especial massy gaps,
+        That will be our for ours to pass and see.
+        The work of hands of that we are to say. `;
+                document.getElementById("q1").innerHTML=text;
+        }
+
+       {
+        //Add 3 Strings to a single sentence without '+' addtion operator.
+        let text1="Hi, I'm Johnson, ";
+        let text2="I love food ";
+        let text3=" and sleeping.";
+        document.getElementById("q21").innerHTML="Text1 = "+text1;
+        document.getElementById("q22").innerHTML="Text2 = "+text2;
+        document.getElementById("q23").innerHTML="Text3 = "+text3;
+        document.getElementById("q24").innerHTML="Sentence = "+text1.concat(text2,text3);
+       }
+
+       {
+        //"Hello! Welcome to Trignosys"
+        let text="Hello! Welcome to Trignosys";
+        document.getElementById("q31").innerHTML="1. Print from 'e' to 'T' = "+text.substring(8,);
+        document.getElementById("q32").innerHTML="2. Print 'Trignosys' only = "+text.slice(-10,);
+        document.getElementById("q33").innerHTML="3. Replace 'Trignosys' to 'Software Company' = "+text.replace('Trignosys','Software Company');
+        document.getElementById("q34").innerHTML="2. Print last 's' character = "+text.slice(-1,);
+       }
+
+       {
+        //My name is ______ and, I'm ______ years old.
+        let name ="Johnson";
+        let age = "10";
+        document.getElementById("q41").innerHTML="Name = "+name;
+        document.getElementById("q42").innerHTML="Age = "+age;
+        document.getElementById("q43").innerHTML=`My name is ${name} and, I'm ${age} years old.`;
+       }
+
+       {
+        //Let x = "Script", replace with "JavaSccript"
+        let x="Script";
+        document.getElementById("q51").innerHTML="x = "+x;
+        document.getElementById("q52").innerHTML="Replaced = "+x.replace("Script","JavaScript");
+       }
+
+       {
+        //Replace "bad" with "good" in the string "JavaScript is bad"
+        let text = "JavaScript is bad";
+        document.getElementById("q61").innerHTML="Text = "+text;
+        document.getElementById("q62").innerHTML="Replaced = "+text.replace("bad","good");
+       }
+
+       {
+        //Write a Js program that asks the username, distric and pincode that prints a formatted
+        let name="Johnson";
+        let district="Vizag";
+        let pincode=531163;
+        document.getElementById("q71").innerHTML="Name = "+name;
+        document.getElementById("q72").innerHTML="Districc = "+district;
+        document.getElementById("q73").innerHTML="pincode = "+pincode;
+        document.getElementById("q74").innerHTML=`        Hello my name is ${name} 
+        I live in ${district} district 
+        my pincode is ${pincode}`;
+       }
+
+       {
+        //String Constructor example
+        let message = "Hello World!";
+        let text = message.constructor;
+
+        document.getElementById("q81").innerHTML = "x = "+message;
+        document.getElementById("q82").innerHTML = text;
+       }
+
+       {
+        //ValueOf
+        let text="Johnson";
+        let result=text.valueOf();
+
+        document.getElementById("q91").innerHTML = "Text = "+text;
+        document.getElementById("q92").innerHTML = "valueof() = "+result;
+       }
+
+       {
+        //convert good morning to uppercase
+        let text="good morning";
+
+        document.getElementById("q101").innerHTML = "Text = "+text;
+        document.getElementById("q102").innerHTML = "Upper = "+text.toUpperCase();
+
+       }
+
+       {
+        //Write a string "apple,banana,kiwi" and split it into an array.
+        let text="apple,banana,kiwi";
+        let arr=text.split(",");
+        document.getElementById("q111").innerHTML = "Text = "+text;
+        document.getElementById("q112").innerHTML = "Arr[0] = "+arr[0];
+       }
+       
+       {
+        //convert WELCOME to lowercase
+        let text="WELCOME";
+
+        document.getElementById("q121").innerHTML = "Text = "+text;
+        document.getElementById("q122").innerHTML = "Lower = "+text.toLowerCase();
+       }
+
+       {
+        //Reverse string "JavaScript"
+        let text="JavaScript";
+        let reverse="";
+        for(i=text.length-1;i>=0;i--)
+        {
+            reverse+=text[i];
+        }
+        document.getElementById("q131").innerHTML = "Text = "+text;
+        document.getElementById("q132").innerHTML = "Reverse = "+reverse;
+       }
+
+       {
+        //Create a number variable and print it
+        let num=123456;
+
+        document.getElementById("q151").innerHTML="Number = "+num;
+        document.getElementById("q152").innerHTML=num;
+       }
+
+       {
+        //Convert string "456" to number
+        let str = "456";
+
+        document.getElementById("q161").innerHTML="String = "+str;
+        document.getElementById("q162").innerHTML="To Number = "+Number(str);
+       }
+
+       {
+        //Add two decimal values and print result
+        let num1=2.52;
+        let num2=3.56;
+
+        document.getElementById("q171").innerHTML="Num1 = "+num1;
+        document.getElementById("q172").innerHTML="Num2 = "+num2;
+        document.getElementById("q173").innerHTML="Total = "+(num1+num2);
+       }
+
+       {
+        //Add two bigint values and print result
+        let num1=99849845135132n;
+        let num2=98451249845121n;
+
+        document.getElementById("q181").innerHTML="Num1 = "+num1;
+        document.getElementById("q182").innerHTML="Num2 = "+num2;
+        document.getElementById("q183").innerHTML="Total = "+(num1+num2);
+       }
+
+       {
+        //Convert the string "999999999999999" into Bigint
+        let text="999999999999999";
+
+        document.getElementById("q191").innerHTML="Text = "+text;
+        document.getElementById("q192").innerHTML="To Bigint = "+BigInt(text);
+        document.getElementById("q193").innerHTML="Type = "+typeof(BigInt(text));
+       }
+       
+       {
+        //Error adding bigint with number
+        let bignum=10n;
+        let num=5;
+
+        document.getElementById("q201").innerHTML="BigNum = "+bignum;
+        document.getElementById("q202").innerHTML="Num = "+num;
+        document.getElementById("q203").innerHTML="Bignum+Num = "+"//Type Error";
+       }
+
+
+       {
+        //Converting Bigint to Number
+        let bignum=10n;
+        let num=5;
+
+        document.getElementById("q211").innerHTML="BigNum = "+bignum;
+        document.getElementById("q212").innerHTML="Num = "+num;
+        document.getElementById("q213").innerHTML="Number(BigNum)+Num = "+((Number(bignum))+num);
+       }
+
+       {
+        //Find result 5&3
+        let x = 5&3;
+        document.getElementById("q221").innerHTML="5 & 3 = "+x;
+
+       }
+
+       {
+        //Find result 7|2
+        let x = 7|2;
+        document.getElementById("q231").innerHTML="7 | 2 = "+x;
+
+       }
+
+       {
+        //Find result 12^4
+        let x = 12^4;
+        document.getElementById("q241").innerHTML="12 ^ 4 = "+x;
+
+       }
+
+       {
+        //Find result 5<<4
+        let x = 5<<4;
+        document.getElementById("q251").innerHTML="5 << 4 = "+x;
+
+       }
+
+       {
+        //Find result 14>>2
+        let x = 14>>2;
+        document.getElementById("q261").innerHTML="14 >> 2 = "+x;
+
+       }
+
+       {
+        //String addition
+        let x="10";
+        let y="20";
+        let z=x+y;
+
+        document.getElementById("q271").innerHTML="x = "+x;
+        document.getElementById("q272").innerHTML="y = "+y;
+        document.getElementById("q273").innerHTML="(x+y) = "+z;
+       }
+
+       {
+        //Number + String
+        let x=10;
+        let y="20";
+        let z=x+y;
+
+        document.getElementById("q281").innerHTML="x(number) = "+x;
+        document.getElementById("q282").innerHTML="y(string) = "+y;
+        document.getElementById("q283").innerHTML="x+y(string) = "+z;
+        document.getElementById("q284").innerHTML="typeof(x+y) = "+typeof(z);
+       }
+
+       {
+        //Print Addition of two decimals numbers using fixed and withou fixed
+        let x=3.1549845;
+        let y=2.54654;
+        let z=x+y;
+        document.getElementById("q291").innerHTML="x = "+x;
+        document.getElementById("q292").innerHTML="y = "+y;
+        document.getElementById("q293").innerHTML="x+y(fixed(2)) = "+z.toFixed(2);
+        document.getElementById("q294").innerHTML="x+y(no fixed) = "+z;
+       }
+
+       {
+        //EPSILON Property
+
+        document.getElementById("q301").innerHTML=Number.EPSILON;
+       }
+
+       {
+        //Check wether given number is prime or not
+        let num = 17;
+            let x=0;
+            let text="";
+            for(i=1;i<=num;i++)
+            {
+                if(num%i==0)
+                {
+                    x++;
+                }
+            }
+
+            if(x<=2)
+            {
+                text="Prime";
+            }
+            else
+            {
+                text="Not Prime";
+            }
+            document.getElementById("q311").innerHTML="Number "+num+" is "+text;
+       }
+
+       {
+        //Grade assignment
+            let marks=70;
+                marks=Math.abs(marks)
+            let grade="";
+
+                if(marks<35)
+            {
+                grade="Fail";
+            }else if(marks>=35 && marks<60)
+            {
+                grade="Good";
+            }else if(marks>=60 && marks<80)
+            {
+                grade="Very Good";
+                }else if(marks>=80 && marks<99)
+            {
+                grade="Excellent";
+            }
+            else{
+                grade="Outstanding";
+            }
+            document.getElementById("q321").innerHTML="Marks = "+marks;
+            document.getElementById("q322").innerHTML="Grade = "+grade;
+        }
+
+        {
+            //Printing odd numbers using continue
+            let text="";
+            for(i=1;i<=20;i++)
+            {
+                if(i%2==0)
+                {
+                    continue;
+                }
+                else
+                {
+                    text += i+"<br>"
+                }
+            }
+            document.getElementById("q331").innerHTML=text;
+        }
+
+    </script>
+    
+
+
+    
+</body>
+</html>
