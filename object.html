@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+    <style>
+        body{
+            counter-reset: section;
+        }
+        h2::before{
+            counter-increment: section;
+            content: counter(section) ". ";
+            font-weight: bold;
+            margin-right: 0.5em;
+        }
+        p,h4,pre{
+
+            margin-left: 50px;
+
+        }
+    </style>
+</head>
+<body style="margin: 130px; margin-left: 350px; font-size: larger; letter-spacing: 0.05em;">
+
+
+    <h2>Object declaration 1</h2>
+    <p id="o1"></p>
+    <p id="o2"></p>
+
+    <h2>Object declaration 2</h2>
+    <p id="o3"></p>
+    <p id="o4"></p>
+    <p id="o5"></p>
+
+    <h2>Object declaration 3 Using Object()</h2>
+    <p id="o6"></p>
+
+    <h2>JavaScript Objects Display</h2>
+    <p id="o7"></p>
+
+    <h2>Displaying Object Properties</h2>
+    <p id="o8"></p>
+
+    <h2>Object Methods</h2>
+    <p id="o9">Object methods are actions that can be performed on objects.</p>
+    <p id="o10"></p>
+
+    <h2>Adding a Method to an Object</h2>
+    <p id="o11">"></p>
+    <p id="o12">"></p>
+
+    <script>
+        {
+            const car = {type:"Fiat", model:"500", color:"white"};
+
+            document.getElementById("o1").innerHTML=`const car = {type:"Fiat", model:"500", color:"white"};`;
+            document.getElementById("o2").innerHTML="car type is "+car.type 
+
+        }
+
+        {
+            // Create an Object
+            const person = {};
+
+            // Add Properties
+            person.firstName = "John";
+            person.lastName = "Doe";
+            person.age = 50;
+            person.eyeColor = "blue";
+
+            document.getElementById("o3").innerHTML='const person = {};';
+            document.getElementById("o4").innerHTML='person.firstName = "John"';
+            document.getElementById("o5").innerHTML="firstname is "+person.firstName; 
+
+        }
+
+        {
+            const person = new Object({
+                firstName: "John",
+                lastName: "Doe",
+                age: 29,
+                eyeColor: "blue"
+                });
+  
+            document.getElementById("o6").innerHTML = person.firstName + " is " + person.age + " years old.";
+        }
+
+        {
+            const person = {
+                name: "John",
+                age: 30,
+                city: "New York"
+                };
+               
+            let text = person;
+
+            document.getElementById("o7").innerHTML = text;
+        }
+
+        {
+            const person = {
+                name: "John",
+                age: 30,
+                city: "New York"
+                };
+
+            let text = person.name + ", " + person.age + ", " + person.city;
+            document.getElementById("o8").innerHTML = text;
+        }
+
+        {
+            const person = {
+                firstName: "John",
+                lastName: "Babu",
+                id: 5566,
+                fullName: function() {
+                    return this.firstName + " " + this.lastName;
+                }
+                };
+
+            document.getElementById("o10").innerHTML = "fullname function() in object = "+person.fullName();
+
+        }
+        {
+
+            const person = {
+                firstName: "John",
+                lastName: "Son",
+                id: 5566,
+                };
+
+            // Add a Method
+                person.name = function() {
+                return this.firstName + " " + this.lastName;
+                };
+
+            document.getElementById("o11").innerHTML =`person.name = function() {
+                return this.firstName + " " + this.lastName;
+                }`;
+            document.getElementById("o12").innerHTML ="My name is " + person.name(); 
+        }
+
+    </script>
+    
+</body>
+</html>
