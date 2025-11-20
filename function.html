@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+    <style>
+        body{
+            counter-reset: section;
+        }
+        h2::before{
+            counter-increment: section;
+            content: counter(section) ". ";
+            font-weight: bold;
+            margin-right: 0.5em;
+        }
+        p,h4,pre{
+
+            margin-left: 50px;
+
+        }
+    </style>
+</head>
+<body style="margin: 130px; margin-left: 350px; font-size: larger; letter-spacing: 0.05em;">
+
+<h2>Pure Function</h2>
+<p id="p1"></p>
+<p id="p2"></p>
+
+<h2>Function Expression</h2>
+<p id="e1"></p>
+<p id="e2"></p>
+
+<h2>Arrow Function</h2>
+<p id="a1"></p>
+<p id="a2"></p>
+
+<h2>Anonymous Function</h2>
+<p>An anonymous function is simply a function without a name</p>
+<p id="n1"></p>
+<p id="n2"></p>
+
+<h2>IIFE(Immediately Invoked Function Expression)</h2>
+<p id="i1"></p>
+<p id="i2"></p>
+
+<h2>Higher Order Function</h2>
+<p id="h1"></p>
+<p id="h2"></p>
+
+<h2>Call Back Function</h2>
+<p id="c0"></p>
+<p id="c1"></p>
+<p id="c2"></p>
+
+<h2>Rest Parameter Function</h2>
+<p id="r0">The rest parameter in JavaScript (...) allows you to represent an indefinite number of arguments as an array.</p>
+<p id="r1"></p>
+<p id="r2"></p>
+
+<h2>Parameterized Function</h2>
+<p id="m1"></p>
+<p id="m2"></p>
+
+<script>
+
+{
+    //Pure Function
+    function myfn(a,b)
+    {
+        return a+b;
+    }
+    document.getElementById("p1").innerHTML=myfn;
+    document.getElementById("p2").innerHTML="myfn(3,5) = "+myfn(3,5);
+}
+
+{
+    //Function Expression
+    const Multiply = function(a,b)
+    {
+        return a*b;
+    }
+    document.getElementById("e1").innerHTML="const Multiply = "+Multiply;
+    document.getElementById("e2").innerHTML="Multiply(3,5) = "+Multiply(3,5);
+}
+
+{
+    //Arrow Function
+    const Subtract = (a,b) => a-b;
+   
+    document.getElementById("a1").innerHTML="const Subtract = "+Subtract;
+    document.getElementById("a2").innerHTML="Subtract(3,5) = "+Subtract(3,5);
+}
+
+{
+    //Anonymous Function
+    const Divide = function()
+    {
+        return 3/5;
+    }
+
+    document.getElementById("n1").innerHTML=Divide;
+    document.getElementById("n2").innerHTML="Direct Invoking without name = "+Divide();
+}
+
+{
+    //IIFE(Immediately Invoked Function Expression)
+    const D = `(function()
+    {
+        document.getElementById("i2").innerHTML="IIFE Invoked";
+    })();`
+
+    document.getElementById("i1").innerHTML=D;
+    (function(){ document.getElementById("i2").innerHTML="IIFE Invoked";})();
+}
+
+{
+    //Higher Order Function
+    const greet = function(name)
+    {
+        document.getElementById("h2").innerHTML="greet(name) = "+"Hello "+name();
+    }
+
+    function name()
+    {
+        return "Johnson";
+    }
+    document.getElementById("h1").innerHTML=`const greet = function(name)
+    {
+        document.getElementById("h2").innerHTML="Hello "+name();
+    }
+        <br>function name()
+    {
+        return "Johnson";
+    }`;
+    greet(name);
+}
+
+{
+    //Call Back Function
+
+    const greet = function(name,callback)
+    {
+        document.getElementById("c1").innerHTML="Hi "+name;
+        callback();
+    }
+
+    function goodmorning()
+    {
+        document.getElementById("c2").innerHTML="Good Morning!";
+    }
+    document.getElementById("c0").innerHTML=`const greet = function(name,callback)
+    {
+        document.getElementById("c1").innerHTML="Hi "+name;
+        callback();
+    }
+
+    function goodmorning()
+    {
+        document.getElementById("c2").innerHTML="Good Morning!";
+    }`;
+    greet("Johnson",goodmorning);
+}
+
+{
+    //Rest Parameter Function
+    function fact(...num)
+    {
+        return num.reduce((total,n)=>total*n);
+    }
+    document.getElementById("r1").innerHTML=`function fact(...num)
+    {
+        return num.reduce((total,n)=>total*n);
+    }`
+    document.getElementById("r2").innerHTML="fact(1,2,3,4,5) = "+fact(1,2,3,4,5);
+}
+
+{
+    //Parameterized Function
+    function greet(name)
+    {
+        document.getElementById("m2").innerHTML='greet("Johnson") = '+'Hey '+name;
+    }
+    document.getElementById("m1").innerHTML=`function greet(name)
+    {
+        document.getElementById("m2").innerHTML="Hey "+name;
+    }`;
+    greet("Johnson");
+}
+
+</script>
+    
+</body>
+</html>
