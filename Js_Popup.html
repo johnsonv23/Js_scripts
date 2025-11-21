@@ -1,0 +1,92 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Popup</title>
+    <style>
+        body{
+            counter-reset: section;
+        }
+        h2::before{
+            counter-increment: section;
+            content: counter(section) ". ";
+            font-weight: bold;
+            margin-right: 0.5em;
+        }
+        p,h4,pre,button{
+
+            margin-left: 50px;
+
+        }
+    </style>
+</head>
+<body style="margin: 130px; margin-left: 350px; font-size: larger; letter-spacing: 0.05em;">
+
+    <h2>Alert box</h2>
+    <p>An alert box is often used if you want to make sure information comes through to the user.</p>
+    <p>When an alert box pops up, the user will have to click "OK" to proceed.</p>
+    <button onclick="myfn1()">Alert</button>
+
+    <h2>Confirm Box</h2>
+    <p>A confirm box is often used if you want the user to verify or accept something.</p>
+    <p>When a confirm box pops up, the user will have to click either "OK" or "Cancel" to proceed.</p>
+    <button onclick="myfn2()">Confirm</button>
+    <p id="c1"></p>
+
+    <h2>Prompt Box</h2>
+    <p>A prompt box is often used if you want the user to input a value before entering a page.</p>
+    <p>When a prompt box pops up, the user will have to click either "OK" or "Cancel" to proceed after entering an input value.</p>
+    <p>If the user clicks "OK" the box returns the input value. If the user clicks "Cancel" the box returns null.</p>
+    <button onclick="myfn3()">Prompt</button>
+    <p id="p1"></p>
+
+
+<script>
+    {
+        //Alert
+        function myfn1()
+        {
+            alert("I am an alert box!");
+        }
+    }
+
+    {
+        //Confirm
+        function myfn2()
+        {
+            let text="";
+            if(confirm("Press a button!"))
+            {
+                text="You pressed OK!";
+            }
+            else
+            {
+                text="You pressed Cancel!";
+            }
+            document.getElementById("c1").innerHTML=text;
+        }
+        
+    }
+
+    {
+        //Prompt
+        function myfn3()
+        {
+            let name = prompt("Please enter you name");
+            let text;
+            if(name==null || name=="")
+            {
+                text="User cancelled prompt";
+            }
+            else
+            {
+                text="Hi "+name+ "! How are you doing?";
+            }
+            document.getElementById("p1").innerHTML=text;
+        }
+    }
+</script>
+
+</body>
+</html>
