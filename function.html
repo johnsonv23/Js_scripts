@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -61,6 +61,29 @@
 <h2>Parameterized Function</h2>
 <p id="m1"></p>
 <p id="m2"></p>
+
+<h2>Impure Function</h2>
+<p id="u1"></p>
+<p id="u2"></p>
+
+<h2>Constructor Function</h2>
+<p id="o1"></p>
+<p id="o2"></p>
+
+<h2>Generator Function</h2>
+<p id="g1"></p>
+<p id="g2"></p>
+<p id="g3"></p>
+
+<h2>Recurssive Function</h2>
+<p id="v1"></p>
+<p id="v2"></p>
+<p id="v3"></p>
+
+<h2>If and Else in function</h2>
+<p id="y1"></p>
+<p id="y2"></p>
+
 
 <script>
 
@@ -188,6 +211,104 @@
     greet("Johnson");
 }
 
+{
+    //Impure Function
+    let x=10;
+    function add(a)
+    {
+        return a+x;
+    }
+    document.getElementById("u1").innerHTML=`let x=10;
+    function add(a)
+    {
+        return a+x;
+    }`;
+    document.getElementById("u2").innerHTML="add(6) = "+add(6);
+}
+
+{
+    //Constructor Function
+    function Person(name){
+        this.name=name;
+    }
+    const P = new Person("Johnson");
+
+    document.getElementById("o1").innerHTML=`function Person(name){
+        this.name=name;
+    }<br>
+    const P = Person("Johnson");`;
+
+    document.getElementById("o2").innerHTML="P.name = "+P.name;
+}
+
+{
+    //Generatior Function
+    function * Numbers()
+    {
+        yield 3;
+        yield 5;
+    }
+    const g = Numbers();
+
+    document.getElementById("g1").innerHTML=`function * Numbers()
+    {
+        yield 3;
+        yield 5;
+    }<br>
+    const g = Numbers();`;
+    document.getElementById("g2").innerHTML="g.next().value = "+g.next().value;
+    document.getElementById("g3").innerHTML="g.next().value = "+g.next().value;
+}   
+
+{
+    //Recurssive Function
+    let text="";
+    function countdown(n)
+    {
+        if(n===0)
+        return;
+        text+=(n+"<br>");
+        countdown(n-1);
+    }
+    document.getElementById("v1").innerHTML=`function countdown(n)
+    {
+        if(n===0)
+        return;
+        text+=(n+"<br>");
+        countdown(n-1);
+    }`;
+    countdown(7);
+    document.getElementById("v2").innerHTML="countdown(7)";
+    document.getElementById("v3").innerHTML=text;
+}
+
+{
+    //If Else
+    function Eligibility(age)
+    {
+        if(age>=18)
+        {
+           return "Allowed";
+        }
+        else
+        {
+            return "Not Allowed";
+        }
+    }
+
+    document.getElementById("y1").innerHTML=`function Eligiblity(age)
+    {
+        if(age>=18)
+        {
+           return "Allowed";
+        }
+        else
+        {
+            return "Not Allowed";
+        }
+    }`;
+    document.getElementById("y2").innerHTML="Eligibility(20) = "+Eligibility(20);
+}
 </script>
     
 </body>
