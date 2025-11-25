@@ -1,0 +1,190 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call, apply, bind</title>
+    <style>
+        body{
+            counter-reset: section;
+        }
+        h2::before{
+            counter-increment: section;
+            content: counter(section) ". ";
+            font-weight: bold;
+            margin-right: 0.5em;
+        }
+        p,h4,pre,button{
+
+            margin-left: 50px;
+
+        }
+    </style>
+</head>
+<body style="margin: 130px; margin-left: 300px; font-size: larger; letter-spacing: 0.05em;">
+
+<h2>call() method</h2>
+<p>With the call() method, you can write a method that can be used on different objects.</p>
+<p>It can be used to invoke (call) a method with an object as an argument (parameter).</p>
+<p id="c1"></p>
+
+<h2>call() Method with arguments</h2>
+<p id="c2"></p>
+
+<h2>apply() Method</h2>
+<p>apply() method is similar to the call(), but it takes  arguments as an array.</p>
+<p id="a1"></p>
+
+<h2>bind() method</h2>
+<p>With the bind() method, an object can borrow a method from another object.</p>
+<p id="b1"></p>
+<p id="b2"></p>
+
+<script>
+
+    {
+        //call() method
+        const person = 
+        {
+            info : function()
+                {
+                   return this.firstname + " " + this.lastname + " is from "+ this.city 
+                }
+        }
+
+        const person1 =
+        {
+            firstname :"Johnson",
+            lastname : "Babu",
+            city : "Vizag"
+        }
+
+        const person2 =
+        {
+            firstname :"Virat",
+            lastname : "Kohli",
+            city : "Delhi"
+        }
+
+        const person3 =
+        {
+            firstname :"Rohit",
+            lastname : "Sharma",
+            city : "Mumbai"
+        }
+
+        document.getElementById("c1").innerHTML="person.info.call(person3) = "+person.info.call(person3);
+    }
+
+    {
+        //call() Method with arguments
+        const person = 
+        {
+            info : function(skill)
+                {
+                   return this.firstname + " " + this.lastname + " is from "+ this.city +" and he is a "+skill;
+                }
+        }
+
+        const person1 =
+        {
+            firstname :"Johnson",
+            lastname : "Babu",
+            city : "Vizag"
+        }
+
+        const person2 =
+        {
+            firstname :"Virat",
+            lastname : "Kohli",
+            city : "Delhi",
+        }
+
+        const person3 =
+        {
+            firstname :"Rohit",
+            lastname : "Sharma",
+            city : "Mumbai"
+        }
+
+        document.getElementById("c2").innerHTML="person.info.call(person2,'Batter') = "+person.info.call(person2,"Batter");
+    }
+
+    {
+        //apply() Method
+        const person = 
+        {
+            info : function(skill,average)
+                {
+                   return this.firstname + " " + this.lastname + " is from "+ this.city +" and he is a "+skill+ " with an average of "+average;
+                }
+        }
+
+        const person1 =
+        {
+            firstname :"Johnson",
+            lastname : "Babu",
+            city : "Vizag"
+        }
+
+        const person2 =
+        {
+            firstname :"Virat",
+            lastname : "Kohli",
+            city : "Delhi",
+        }
+
+        const person3 =
+        {
+            firstname :"Rohit",
+            lastname : "Sharma",
+            city : "Mumbai"
+        }
+
+        document.getElementById("a1").innerHTML="person.info.apply(person3,['Batter',52.85]) = "+person.info.apply(person3,["Batter",52.85]);
+    }
+
+    {
+        //bind method
+
+        const person = 
+        {
+            firstname:"Johnson",
+            lastname:"Babu",
+            info : function()
+                {
+                   return this.firstname + " " + this.lastname + " is from "+ this.city;
+                }
+        }
+
+        const person1 =
+        {
+            firstname :"Shikar",
+            lastname : "Dhawan",
+            city : "Punjab"
+        }
+
+        const person2 =
+        {
+            firstname :"Virat",
+            lastname : "Kohli",
+            city : "Delhi"
+        }
+
+        const person3 =
+        {
+            firstname :"Rohit",
+            lastname : "Sharma",
+            city : "Mumbai"
+        }
+
+        const x = person.info.bind(person1);
+        document.getElementById("b1").innerHTML="const x = "+"person.info.call(person1)";
+        document.getElementById("b2").innerHTML="x() = "+x();
+
+    }
+
+</script>
+
+</body>
+</html>
