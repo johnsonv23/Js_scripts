@@ -40,6 +40,32 @@
 <p id="b1"></p>
 <p id="b2"></p>
 
+<h2>this in a Function (Default)</h2>
+<p>In a function, by default, this is the global object.</p>
+<p id="t1"></p>
+
+<h2>this in Event Handlers</h2>
+<p>In HTML event handlers, this refers to the HTML element that received the event:</p>
+<button onclick="this.style.color='red'">Click to change text color!</button>
+
+<h2>onclick event</h2>
+<button onclick="document.getElementById('o1').innerHTML=Date()">Whats the time?</button>
+<p id="o1"></p>
+<button onclick="this.innerHTML=Date()">Whats the time?</button>
+<button id="date" onclick="time()">Time from function?</button>
+
+<h2>onclick on text</h2>
+<p onclick="changeText(this)">Click to change text</p>
+
+<h2>oninput event</h2>
+<p>oninput event is often to some action while the user input data.</p>
+<p><input type="text" id="fname" oninput="upperCase1()"></p>
+
+<h2>onchange event</h2>
+<p>onchange event is often used in combination with validation of input fields.</p>
+<p><input type="text" id="fname1" onchange="upperCase2()"></p>
+
+
 <script>
 
     {
@@ -182,6 +208,50 @@
         document.getElementById("b1").innerHTML="const x = "+"person.info.call(person1)";
         document.getElementById("b2").innerHTML="x() = "+x();
 
+    }
+
+    {
+        //this in a Function (Default)
+        function myFunction() 
+        {
+            return this;
+        }
+        document.getElementById("t1").innerHTML="myFunction() = "+myFunction();
+    }
+
+    {
+        //onclick event
+        function time()
+        {
+            return document.getElementById("date").innerHTML=Date();
+        }
+    }
+
+    {
+        //onclick change text
+        function changeText(id)
+        {
+            id.innerHTML="Ayyooo!"
+        }
+    }
+
+    {
+        //oninput event
+        function upperCase1()
+        {
+            const x = document.getElementById("fname");
+            x.value=x.value.toUpperCase();
+        }
+
+    }
+
+    {
+        //onchange event
+        function upperCase2()
+        {
+            const x = document.getElementById("fname1");
+            x.value=x.value.toUpperCase();
+        }
     }
 
 </script>
