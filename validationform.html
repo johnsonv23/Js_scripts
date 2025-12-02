@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Form</title>
+</head>
+<body style="margin: 130px; margin-left: 350px; font-size: larger; letter-spacing: 0.05em;">
+
+    <h2>JavaScript Validation</h2>
+
+    <form name="myForm" action="" method="post" onsubmit="return validateForm()">
+        <label for="fname">Name : </label>
+        <input type="text" name="fname" id="">
+        <label for="age">Age : </label>
+        <input type="text" name="age" id=""><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p id="output"></p>
+
+    <script>
+        function validateForm(){
+            let x= document.forms["myForm"]["fname"].value;
+            let y= document.forms["myForm"]["age"].value;
+                y=Number(y);
+
+            if(x==="" || y==="")
+            {
+                alert("Input must be filled out!");
+                return false;
+            }
+            else if(y>=18)
+                {
+                    document.getElementById("output").innerHTML="You are Eligible!";
+                    return false;
+                }
+                else{
+                    document.getElementById("output").innerHTML="You are NOT Eligible!, come after crossing 17!!!";
+                    return false;
+                }
+
+
+        }
+    </script>
+    
+</body>
+</html>
