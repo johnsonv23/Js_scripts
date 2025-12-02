@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- <link rel="stylesheet" href="output.css"> -->
+    <title>Map Tailwindcss</title>
+</head>
+<body>
+    <h1 class="text-5xl text-center mt-16 text-orange-500">Johnson Electronics</h1>
+    <button class="bg-gray-200 fixed top-32 left-28 px-20 py-1 text-2xl font-semibold  text-green-800 opacity-80 hover:opacity-100" onclick="openForm()">Get Started</button>
+
+    <div id="myForm" class="hidden fixed top-32 left-28 border-1 border-gray-200 z-10">
+        <form action="" method="post" class="w-[282px] p-10 bg-gray-200 flex flex-col">
+            <h2 class="text-3xl mb-3">Login</h2>
+
+            <label for="user"><b>Username</b></label>
+            <input class="w-full bg-white p-1" type="text" name="email" id="" placeholder="Enter username" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input class="w-full bg-white p-1" type="text" name="psw" id="" placeholder="Enter password" required>
+            <button class="bg-[#04AA6D] mt-4 py-1 text-white opacity-80 hover:opacity-100" type="submit">Login</button>
+            <button class="bg-red-600 mt-2 py-1 text-white opacity-80 hover:opacity-100"  onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <script>
+        function openForm(){
+            document.getElementById("myForm").style.display="block";
+        }
+
+        function closeForm(){
+            document.getElementById("myForm").style.display="none";
+        }
+    </script>
+
+    <div id="container" class="m-24 mt-12"></div>
+    
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+
+
+    
+</body>
+</html>
